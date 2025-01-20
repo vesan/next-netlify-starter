@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const PUBLIC_FILE = /\.(.*)$/;
 
-export async function middleware(req: NextRequest) {
+export default async function middleware(req: NextRequest) {
   console.log("req", req);
   console.log("Request in middleware", req.nextUrl);
   console.log("req.nextUrl.pathname", req.nextUrl.pathname);
